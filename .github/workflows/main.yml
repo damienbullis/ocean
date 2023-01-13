@@ -1,0 +1,37 @@
+name: CI - Main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: nrwl/nx-set-shas@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "yarn"
+      - run: yarn --immutable
+
+      - run: yarn nx workspace-lint
+      - run: yarn nx format:check
+      - run: yarn nx affected --target=lint --parallel=3
+      - run: yarn nx affected --target=test --parallel=3 --ci --code-coverage
+      - run: yarn nx affected --target=build --parallel=3
+      - run: yarn nx affected --target=version-patch --parallel=3
+      - run: yarn nx affected --target=publish --parallel=3
+      - uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Git Version Bot
+          author_email: git@users.noreply.github.com
+          message: "Version bump for packages"
+          push: true

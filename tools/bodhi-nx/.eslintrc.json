@@ -1,0 +1,23 @@
+{
+  "extends": ["plugin:@nrwl/nx/typescript", "../../.eslintrc.json"],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "excludedFiles": ["**/files/**/*", "**/templates/**/*"]
+    },
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"}
+    }
+  ]
+}

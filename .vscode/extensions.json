@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "nrwl.angular-console",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "firsttris.vscode-jest-runner"
+  ]
+}

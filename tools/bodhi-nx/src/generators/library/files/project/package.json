@@ -1,0 +1,21 @@
+{
+  "name": "@bodhidigital/<%= libName %>",
+  "version": "<%= version %>",
+  "main": "src/index.ts",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

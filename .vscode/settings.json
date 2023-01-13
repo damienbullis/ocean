@@ -1,0 +1,30 @@
+{
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "mdx",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.exclude": {
+    "**/node_modules": true,
+    ".prettierignore": true,
+    ".eslintrc.json": false,
+    ".eslintignore": false,
+    ".nvmrc": true,
+    ".prettierrc.js": true,
+    ".yarnrc.yml": false,
+    ".husky": false
+  },
+  "search.exclude": {
+    "dist/**": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

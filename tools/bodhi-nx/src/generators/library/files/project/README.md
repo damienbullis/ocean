@@ -1,0 +1,1 @@
+# `@bodhidigital/<%= libName %>`

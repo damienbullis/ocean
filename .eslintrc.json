@@ -1,0 +1,17 @@
+{
+  "extends": ["plugin:@nrwl/nx/typescript"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"}
+    }
+  ],
+  "root": true
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "bodhi-nx",
+  "version": "0.0.1",
+  "generators": {
+    "library": {
+      "factory": "./src/generators/library",
+      "schema": "./src/generators/library/schema.json",
+      "description": "generate a ts library"
+    },
+    "node-cli": {
+      "factory": "./src/generators/node-cli",
+      "schema": "./src/generators/node-cli/schema.json",
+      "description": "generate a ts library"
+    },
+    "react-app": {
+      "factory": "./src/generators/react-app",
+      "schema": "./src/generators/react-app/schema.json",
+      "description": "generate a React application"
+    }
+  }
+}

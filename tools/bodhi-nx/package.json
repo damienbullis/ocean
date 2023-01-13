@@ -1,0 +1,20 @@
+{
+  "name": "@bodhidigital/bodhi-nx",
+  "description": "Custom NX plug-in for bodhi",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "generators": "./generators.json",
+  "executors": "./executors.json",
+  "devDependencies": {
+    "@nrwl/devkit": "^15.2.4",
+    "@swc-node/register": "^1.4.2",
+    "@swc/cli": "~0.1.55",
+    "@swc/core": "^1.2.173",
+    "@swc/helpers": "~0.3.3",
+    "nx": "^15.2.4",
+    "typescript": "^4.9.3"
+  },
+  "scripts": {
+    "lint:fix": "prettier --write \"**/*.{js,ts}\""
+  }
+}

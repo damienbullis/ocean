@@ -1,0 +1,5 @@
+dist/
+**/*.d.ts
+**/files/**/*
+**/templates/**/*
+src/**/jest.config.ts
