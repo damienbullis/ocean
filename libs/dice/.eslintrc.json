@@ -1,0 +1,18 @@
+{
+  "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+    },
+    {
+      "files": ["**/*.js"],
+
+    }
+  ]
+}

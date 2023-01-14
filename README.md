@@ -19,3 +19,11 @@ yarn
 ### Create typescript react app
 
 1. `yarn nx g react-app`
+
+---
+
+### Running Commands
+
+yarn nx `<command>` <package-name>
+
+yarn workspace @bodhidigital/<package-name> add <new-package>

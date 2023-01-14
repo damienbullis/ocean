@@ -1,0 +1,19 @@
+{
+  "name": "@bodhidigital/dice",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

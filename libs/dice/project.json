@@ -1,0 +1,44 @@
+{
+  "name": "dice",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/dice/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/dice/**/*.{ts,tsx,js,jsx}"
+        ],
+        "ignorePath": "libs/dice/.eslintignore"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "libs/dice/dist"
+      ],
+      "options": {
+        "commands": [
+          {
+            "command": "tsc --project libs/dice/tsconfig.build.json"
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "libs/dice/reports/coverage"
+      ],
+      "options": {
+        "jestConfig": "libs/dice/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
