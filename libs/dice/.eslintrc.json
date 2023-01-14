@@ -8,11 +8,10 @@
   },
   "overrides": [
     {
-      "files": ["**/*.ts"],
+      "files": ["**/*.ts"]
     },
     {
-      "files": ["**/*.js"],
-
+      "files": ["**/*.js"]
     }
   ]
 }
